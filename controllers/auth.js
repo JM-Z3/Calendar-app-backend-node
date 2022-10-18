@@ -95,12 +95,12 @@ const loginUser = async(request, response = response) => {
 
 const revalidateToken = async(request, response = response) => {
 
-    const {id,name} = request.body;
-    console.log(request.body);
+    const {uid,name} = request;
+    
     
 
     //generar un jwt 
-    const token = await generateJWT(id, name);
+    const token = await generateJWT(uid, name);
 
     
     response.json({
