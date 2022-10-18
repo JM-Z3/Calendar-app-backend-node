@@ -96,6 +96,7 @@ const loginUser = async(request, response = response) => {
 const revalidateToken = async(request, response = response) => {
 
     const {id,name} = request.body;
+    console.log(request.body);
     
 
     //generar un jwt 
